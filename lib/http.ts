@@ -1,7 +1,7 @@
 // Explicit .ts imports also allow the HTTP contract tests to run in Node 24.
 import { assessRequest, DomainValidationError, freezeBatch, validateBatchPolicy, validateSourceRequest, validateExtraction } from './batch-domain.ts';
 import type { AnalyzedRequest, BatchPolicy, FrozenBatch } from './batch-domain.ts';
-import { createDemoScenario } from './demo-data.ts';
+import { createLibraryScenario, REQUEST_LIBRARY } from './request-library.ts';
 import { freezeReviewedTerms, LOCAL_MODEL_ID } from './private-proposal.ts';
 import { createPayPalClient, moneyMatches, PayPalError, paymentRequestId, sandboxApprovalUrl, verifyOrder } from './paypal.ts';
 import type { PayPalPort } from './paypal.ts';
@@ -169,10 +169,10 @@ export async function handleApi(request: Request, env: HttpEnvironment, options:
       } else {
         const requests = checkedAnalysis(body.requests, policy);
         const evidenceHash = await analysisDigest(requests, policy);
-        const hashes = await Promise.all([now(), now() - 24 * HOUR].map(async date => {
-          const originals = createDemoScenario(new Date(date)).analysis.map(item => assessRequest(item.source, item.extraction, policy));
+        const hashes = await Promise.all([now(), now() - 24 * HOUR].flatMap(date => REQUEST_LIBRARY.map(async entry => {
+          const originals = createLibraryScenario(entry.id, new Date(date)).analysis.map(item => assessRequest(item.source, item.extraction, policy));
           return analysisDigest(originals, policy);
-        }));
+        })));
         if (!hashes.includes(evidenceHash)) throw new HttpError(400, 'EXAMPLE_CHANGED', 'Restore today’s synthetic sample, or run live analysis for edited requests.');
         proposal = freezeBatch({ id: newId, version: 1, title: body.title as string, policy, requests, makerApprovedAt: created, now: created });
       }
