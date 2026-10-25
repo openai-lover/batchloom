@@ -1,0 +1,56 @@
+{
+  "scenario": "fixture-induced-external-invalidation-refund",
+  "status": "verified",
+  "environment": "PayPal Sandbox",
+  "liveFunds": false,
+  "observedAt": "2026-10-25T05:50:21.933Z",
+  "terms": {
+    "currency": "USD",
+    "unitPriceMinor": 2400,
+    "authorizationQuantities": [
+      6,
+      6
+    ],
+    "authorizationAmountsMinor": [
+      14400,
+      14400
+    ],
+    "minimumUnits": 12
+  },
+  "testMethod": {
+    "ledger": "isolated-in-memory-fixture",
+    "applicationDatabaseUpdated": false,
+    "clockIsSimulated": false,
+    "fixtureInducedExternalInvalidation": true,
+    "secondCaptureForbidden": true,
+    "description": "After the unchanged settlement engine captured the first authorization and persisted CAPTURED in the fixture ledger, the fixture harness voided the second authorization at the next provider-read boundary. The engine observed actual VOIDED state, entered compensation and fully refunded the first capture. No mock response header was used in this successful recovery test."
+  },
+  "events": [
+    {
+      "operation": "capture-first",
+      "status": "COMPLETED"
+    },
+    {
+      "operation": "fixture-induced-external-void-second",
+      "status": "VOIDED"
+    },
+    {
+      "operation": "automatic-refund-first",
+      "status": "COMPLETED"
+    }
+  ],
+  "providerFinalState": {
+    "firstCapture": "REFUNDED",
+    "firstRefund": "COMPLETED",
+    "secondAuthorization": "VOIDED",
+    "secondCaptureCalls": 0
+  },
+  "settlementState": "CANCELLED",
+  "failureReason": "AUTHORIZATION_NO_LONGER_VALID",
+  "limits": [
+    "This is an intentionally induced external authorization invalidation race, not natural expiration and not a verified AUTHORIZATION_EXPIRED mock response.",
+    "The original application database was unchanged; this is actual provider recovery exercised by an isolated in-memory fixture, not a browser end-to-end recovery sequence.",
+    "The earlier successful browser capture batch was preserved. The result proves one synchronous Sandbox recovery sequence, not every provider or operational failure."
+  ],
+  "redaction": "Credential values, buyer identity, merchant identifiers, payment and batch identifiers, owner hashes and recovery snapshots are omitted."
+}

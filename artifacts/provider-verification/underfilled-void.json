@@ -1,0 +1,37 @@
+{
+  "scenario": "underfilled-deadline-void",
+  "status": "verified",
+  "environment": "PayPal Sandbox",
+  "liveFunds": false,
+  "observedAt": "2026-10-25T05:34:12.404Z",
+  "providerBehavior": {
+    "authorizationBefore": "CREATED",
+    "authorizationAfter": "VOIDED",
+    "captureCalls": 0,
+    "refundCalls": 0
+  },
+  "terms": {
+    "currency": "USD",
+    "unitPriceMinor": 2400,
+    "unitsAuthorized": 1,
+    "minimumUnits": 12,
+    "capacityUnits": 48,
+    "originalWindowHours": 48
+  },
+  "testMethod": {
+    "ledger": "isolated-in-memory-fixture",
+    "applicationDatabaseUpdated": false,
+    "clockIsSimulated": true,
+    "fixtureClock": "2026-10-27T05:31:05.542Z",
+    "originalDeadline": "2026-10-27T05:31:04.542Z",
+    "description": "The unchanged settlement engine received an explicit test clock just after the original deadline. The test did not wait 48 real hours and did not rewrite the application database. Only the new synthetic fixture authorization was voided."
+  },
+  "settlementState": "CANCELLED",
+  "failureReason": "MINIMUM_NOT_REACHED",
+  "limits": [
+    "This verifies one actual Sandbox void and the underfilled deadline branch using an injected clock.",
+    "The application ledger is intentionally unchanged; its stale fixture UI must not be presented as the final provider state.",
+    "This does not verify real elapsed-time scheduling, production payments, refunds, or partial-capture compensation."
+  ],
+  "redaction": "Credential values, buyer identity, merchant identifiers, payment and batch identifiers, owner hashes and the recovery ledger are omitted."
+}

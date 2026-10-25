@@ -1,0 +1,29 @@
+{
+  "scenario": "mock-expiration-preflight",
+  "status": "not-verified",
+  "environment": "PayPal Sandbox",
+  "liveFunds": false,
+  "observedAt": "2026-10-25T05:47:12.315Z",
+  "applicationDatabaseUpdated": false,
+  "legitimateCaptureCalls": 0,
+  "fakeAuthorizationCapture": {
+    "requestedMockIssue": "AUTHORIZATION_EXPIRED",
+    "expectedHttpStatus": 422,
+    "observedHttpStatus": 403,
+    "result": "preflight stopped before any legitimate capture"
+  },
+  "existingAuthorizationReadProbe": {
+    "before": "CREATED",
+    "requestedMockIssue": "INVALID_RESOURCE_ID",
+    "httpStatusWithMockHeader": 404,
+    "providerName": "RESOURCE_NOT_FOUND",
+    "issue": "INVALID_RESOURCE_ID",
+    "after": "CREATED"
+  },
+  "authorizationsAfterDiagnostic": [
+    "CREATED",
+    "CREATED"
+  ],
+  "interpretation": "The read-only mock header worked. The intentionally nonexistent-ID capture preflight did not establish capture-error injection. Resource/access validation preceding the capture mock is an inference, not a confirmed PayPal internal cause.",
+  "redaction": "Only allowlisted protocol labels and HTTP statuses were retained. No raw provider body, credential, debug ID, buyer detail, account or resource identifier is included."
+}
