@@ -1,0 +1,363 @@
+{
+  "formatVersion": 1,
+  "corpusId": "batchloom-local-ai-independent-holdout-v1",
+  "authoredOn": "2026-10-25",
+  "status": "New English holdout prepared without reading the span-v2 prompt or individual model outputs. No model run by the author. Single-agent synthetic labels, not independent human validation.",
+  "license": "CC0-1.0",
+  "provenance": "New synthetic requests, separate from local-ai-eval.json; never use as prompt examples or extraction rules.",
+  "split": {
+    "en": 6
+  },
+  "referencePolicy": {
+    "productId": "riso-notebook",
+    "unitPriceCents": 2400,
+    "currency": "USD",
+    "variants": [
+      "cobalt",
+      "vermilion"
+    ],
+    "variant": "cobalt",
+    "shipBy": "2027-02-01",
+    "minimumUnits": 12,
+    "capacityUnits": 48,
+    "reservationWindowHours": 48
+  },
+  "cases": [
+    {
+      "id": "local-holdout-en-01",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "clear",
+        "paraphrase"
+      ],
+      "source": {
+        "id": "local-holdout-en-01",
+        "customerLabel": "Synthetic holdout 1",
+        "body": "For the volunteer welcome desk, please set aside 8 cobalt notebooks. I can spend USD 31 per copy. Dispatch by 2027-02-08 would work.",
+        "receivedAt": "2026-10-25T13:00:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 8,
+          "quotes": [
+            "8 cobalt notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "cobalt",
+          "quotes": [
+            "cobalt"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": 3100,
+          "quotes": [
+            "USD 31 per copy"
+          ],
+          "allowUnknown": false
+        },
+        "deadline": {
+          "value": "2027-02-08",
+          "quotes": [
+            "Dispatch by 2027-02-08"
+          ],
+          "allowUnknown": false
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    },
+    {
+      "id": "local-holdout-en-02",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "clear",
+        "number-word",
+        "decimal-cents"
+      ],
+      "source": {
+        "id": "local-holdout-en-02",
+        "customerLabel": "Synthetic holdout 2",
+        "body": "Three vermilion notebooks are what I need for the poetry readers. My cap is $27.50 each, and please send them by 2027-02-12.",
+        "receivedAt": "2026-10-25T13:01:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 3,
+          "quotes": [
+            "Three vermilion notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "vermilion",
+          "quotes": [
+            "vermilion"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": 2750,
+          "quotes": [
+            "$27.50 each"
+          ],
+          "allowUnknown": false
+        },
+        "deadline": {
+          "value": "2027-02-12",
+          "quotes": [
+            "by 2027-02-12"
+          ],
+          "allowUnknown": false
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    },
+    {
+      "id": "local-holdout-en-03",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "clear",
+        "form-paraphrase",
+        "incidental-reference"
+      ],
+      "source": {
+        "id": "local-holdout-en-03",
+        "customerLabel": "Synthetic holdout 3",
+        "body": "Staff stationery request: cobalt notebooks; quantity: 6. The reference number is 2580. My limit is $26.25 per notebook, with dispatch no later than 2027-02-10.",
+        "receivedAt": "2026-10-25T13:02:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 6,
+          "quotes": [
+            "quantity: 6"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "cobalt",
+          "quotes": [
+            "cobalt"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": 2625,
+          "quotes": [
+            "$26.25 per notebook"
+          ],
+          "allowUnknown": false
+        },
+        "deadline": {
+          "value": "2027-02-10",
+          "quotes": [
+            "dispatch no later than 2027-02-10"
+          ],
+          "allowUnknown": false
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    },
+    {
+      "id": "local-holdout-en-04",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "total-not-unit",
+        "no-division"
+      ],
+      "source": {
+        "id": "local-holdout-en-04",
+        "customerLabel": "Synthetic holdout 4",
+        "body": "Please note 5 cobalt notebooks for our discussion group. I have $150 for the entire order, including postage, and need dispatch by 2027-02-09. I have not set a per-item budget.",
+        "receivedAt": "2026-10-25T13:03:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 5,
+          "quotes": [
+            "5 cobalt notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "cobalt",
+          "quotes": [
+            "cobalt"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": null,
+          "quotes": [],
+          "allowUnknown": true,
+          "reason": "The only amount is the whole-order total including postage, with no stated unit budget."
+        },
+        "deadline": {
+          "value": "2027-02-09",
+          "quotes": [
+            "dispatch by 2027-02-09"
+          ],
+          "allowUnknown": false
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    },
+    {
+      "id": "local-holdout-en-05",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "negation",
+        "explicit-replacement"
+      ],
+      "source": {
+        "id": "local-holdout-en-05",
+        "customerLabel": "Synthetic holdout 5",
+        "body": "Do not reserve the 10 vermilion notebooks from the old worksheet. Replace that with 4 cobalt notebooks, a maximum of $28 each, for dispatch by 2027-02-11.",
+        "receivedAt": "2026-10-25T13:04:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 4,
+          "quotes": [
+            "Replace that with 4 cobalt notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "cobalt",
+          "quotes": [
+            "4 cobalt notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": 2800,
+          "quotes": [
+            "$28 each"
+          ],
+          "allowUnknown": false
+        },
+        "deadline": {
+          "value": "2027-02-11",
+          "quotes": [
+            "dispatch by 2027-02-11"
+          ],
+          "allowUnknown": false
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    },
+    {
+      "id": "local-holdout-en-06",
+      "group": "en",
+      "language": "en",
+      "tags": [
+        "competing-dates",
+        "required-abstention"
+      ],
+      "source": {
+        "id": "local-holdout-en-06",
+        "customerLabel": "Synthetic holdout 6",
+        "body": "I would like 2 cobalt notebooks at $30 each. Either 2027-02-06 or 2027-02-13 could work for dispatch, but I have not chosen between those dates. Please ask rather than select one.",
+        "receivedAt": "2026-10-25T13:05:00.000Z"
+      },
+      "expected": {
+        "product": {
+          "value": "notebook",
+          "quotes": [
+            "notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "quantity": {
+          "value": 2,
+          "quotes": [
+            "2 cobalt notebooks"
+          ],
+          "allowUnknown": false
+        },
+        "variant": {
+          "value": "cobalt",
+          "quotes": [
+            "cobalt"
+          ],
+          "allowUnknown": false
+        },
+        "unitBudgetCents": {
+          "value": 3000,
+          "quotes": [
+            "$30 each"
+          ],
+          "allowUnknown": false
+        },
+        "deadline": {
+          "value": null,
+          "quotes": [],
+          "allowUnknown": true,
+          "reason": "The two dispatch dates are unresolved alternatives; neither is the chosen deadline."
+        }
+      },
+      "applicationSupport": {
+        "grounding": "supported",
+        "fieldsRequiringParserSupport": []
+      }
+    }
+  ]
+}
