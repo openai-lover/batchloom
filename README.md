@@ -6,6 +6,10 @@ This hackathon prototype uses fictional goods and synthetic demo messages. It do
 
 ## How it works
 
+The request library contains **24 authored fictional requests across three contexts**: a writing circle, a vermilion print workshop and a bookshop restock. Each set includes compatible requests, conflicting terms and missing details. Distinct generated scenes identify the context; collections and the payment journal show actual ledger state rather than decorative product photography.
+
+Search, status filters and sorting help prioritize review. Each set keeps its own editable draft in this tab. Reloading or switching sets restores raw inputs but clears analysis and approval; the maker must review the current wording again. **Studio guide → Clear saved drafts** removes saved draft copies. These examples are inputs, not customers or transactions.
+
 1. Review the illustrated requests, or run the Qwen3 model locally on a compatible browser GPU.
 2. Inspect the original quotation behind each extracted product, quantity, color, budget and date. Ambiguities and conflicts stay visible.
 3. Approve fixed terms: $24 per notebook, a 12-unit minimum, capacity up to 48, and a 48-hour reservation window.
@@ -20,7 +24,7 @@ The application uses WebLLM 0.2.86 and a pinned Qwen3 model. The shared identity
 
 The first model load downloads approximately 1 GB and may need roughly 2 GB of GPU memory with the current Qwen3 1.7B candidate. Device performance varies. HTTPS or localhost, WebGPU and `shader-f16` are required. Unsupported devices get an explicit explanation and can use the separately labelled illustrated example.
 
-Customer source text and evidence remain in page/worker memory during local analysis. Publishing a local-model batch sends its public title, approved policy and aggregate counts only. The server records model identity as **self-reported**; it cannot prove that a model ran or that a summary matches private source text. Only actual PayPal-confirmed reservations qualify for payment settlement.
+Customer source text and evidence remain on the device during local analysis. Raw draft requests, labels and dispatch dates are also saved in this tab's sessionStorage; analysis and payment approval are not restored from storage. Storage is not encrypted by the application, and browser session recovery may retain it. Use fictional inputs and clear saved drafts on a shared device. Publishing a local-model batch sends its public title, approved policy and aggregate counts only. The server records model identity as **self-reported**; it cannot prove that a model ran or that a summary matches private source text. Only actual PayPal-confirmed reservations qualify for payment settlement.
 
 Model downloads contact Hugging Face/CDN and GitHub, which receive normal network metadata. The optional **Export proposal** downloads source text and evidence to a local JSON file. That file is not uploaded by the app; do not publish real customer material in an export.
 
