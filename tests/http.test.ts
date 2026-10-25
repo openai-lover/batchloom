@@ -8,6 +8,7 @@ import { DEMO_ANALYSIS, DEMO_POLICY, DEMO_REQUESTS, createDemoScenario } from '.
 import type { PayPalOrder, PayPalPort } from '../lib/paypal.ts';
 import { PayPalError } from '../lib/paypal.ts';
 import { LOCAL_MODEL_ID } from '../lib/private-proposal.ts';
+import { createLibraryScenario } from '../lib/request-library.ts';
 
 const START = Date.parse('2026-10-25T12:00:00Z');
 const ORIGIN = 'https://batchloom.example';
@@ -235,5 +236,24 @@ test('HTTP MOCK: fresh and previous-UTC-day examples publish during December jud
     const body = await response.json() as { proposal: { closesAt: string; policy: { shipBy: string } } };
     assert.equal(Date.parse(body.proposal.closesAt), judgedAt + 48 * 3600_000);
     assert.ok(body.proposal.policy.shipBy > '2026-12-17');
+  }
+});
+
+test('HTTP MOCK: each new authored library set publishes with fixed terms and zero payment records; modified examples fail', async () => {
+  for (const id of ['workshop', 'restock'] as const) {
+    const f = setup(); const maker = await cookie(f.call);
+    const example = createLibraryScenario(id, new Date(START));
+    const payload = { title: `Library ${id}`, policy: example.policy, requests: example.analysis, makerApproved: true, provenance: 'example' };
+    const response = await f.call(request('batches', { cookie: maker, body: payload }));
+    assert.equal(response.status, 201, await response.clone().text());
+    const result = await response.json() as { proposal: { policy: { variant: string; unitPriceCents: number } }; authorizedUnits: number; capturedCents: number };
+    assert.equal(result.proposal.policy.variant, example.policy.variant);
+    assert.equal(result.proposal.policy.unitPriceCents, 2400);
+    assert.equal(result.authorizedUnits, 0); assert.equal(result.capturedCents, 0); assert.equal(f.orders.size, 0);
+    const changed = structuredClone(payload); changed.requests[0].source.customerLabel = 'Unapproved substitution';
+    const rejected = await f.call(request('batches', { cookie: maker, body: changed }));
+    assert.equal(rejected.status, 400);
+    assert.equal((await rejected.json() as { code: string }).code, 'EXAMPLE_CHANGED');
+    assert.equal(f.store.records.size, 1);
   }
 });
