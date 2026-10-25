@@ -73,7 +73,7 @@ Actual local verification includes the browser authorization/capture sequence an
 
 Publish a filtered source archive and use the Sites hosting workflow for the Worker and D1 migrations. Local runtime files are not deployment configuration. The public repository must exclude `.env*`, `.dev.vars*`, `.sites-runtime/`, `.wrangler/`, `.vinext/`, dependency/build caches and private exports. Inspect the final archive's file list; `.gitignore` alone is not proof that an arbitrary archive is safe.
 
-Validate the deployed HTTPS origin, model download/worker, session isolation, PayPal return URL and maker settlement there before treating a local success as deployment success. The security review lists proposed response headers and the exact model-download hosts observed during the audit.
+Validate the deployed HTTPS origin, model download/worker, session isolation, PayPal return URL and maker settlement there before treating a local success as deployment success. The [security review](docs/security-review.md) records the private v1 probe: `/api/config` included the intended security headers, while tested HTML and static assets did not. Global header coverage and CSP enforcement are not established. The review also lists the model-download hosts observed during the audit.
 
 Generated stationery imagery provides the visual direction; source prompts are recorded in [image prompts](docs/image-prompts.md). Bundled third-party runtime/style licenses are retained with their assets.
 
