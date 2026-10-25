@@ -18,11 +18,12 @@ The public repository, final source archive and deployed HTTPS origin still requ
 
 | Data | Current handling |
 | --- | --- |
-| Customer body, label, extracted quotations | Page state and local model worker memory; not included in local-model publishing requests. |
+| Customer body, label, extracted quotations | Page state and local model worker memory; not included in local-model publishing requests. Raw request bodies, labels and dispatch dates are additionally saved to tab-scoped sessionStorage. Analysis and payment approvals are never restored from drafts. |
+| Draft retention | Not application-encrypted; browser session recovery may retain sessionStorage. Studio guide can clear saved draft copies. Current on-screen text remains until replaced; subsequent edits save a fresh draft. Use synthetic inputs only. |
 | Model weights/tokenizer/WASM | Downloaded on explicit action from pinned public model/runtime revisions; model assets may remain in browser caches. |
 | Local proposal export | A user-triggered JSON download containing source and evidence. The app does not upload it; a person can still share that file themselves. |
 | Published local-model proposal | Public title, fixed product/dispatch policy, aggregate interest counts, self-reported model ID; empty source ID list. Do not put private information in the public title. |
-| Illustrated example | Canonical synthetic fixtures only; server compares today's or the previous UTC day's scenario. |
+| Illustrated example | Three canonical synthetic request sets only; server compares each set for today or the previous UTC day. Edits cannot be published as an authored result. |
 | D1 payment state | Batch/pledge IDs, quantities, fixed amounts, provider resource IDs and statuses, idempotency IDs, lease/version state, hashed browser ownership IDs. No full PayPal payer profile or provider response body is persisted by these routes. |
 | Browser access | A random 256-bit HttpOnly, host-only, SameSite=Lax cookie; Secure and `__Host-` prefix on HTTPS. D1 stores a hash, not the raw cookie. Cookie expiry is seven days and is renewed on requests. |
 | Checkout retry identity | Random nonce in sessionStorage, scoped by batch; it is not a PayPal credential. |

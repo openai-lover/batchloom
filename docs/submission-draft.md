@@ -1,6 +1,6 @@
 # Batchloom — Devpost submission draft
 
-Prepared 2026-10-25 with the verified public-site model-to-payment workflow. This file separates reusable public copy from internal submission checks. It is not a submitted entry; the public YouTube URL and final Devpost workflow remain separate steps.
+Prepared 2026-10-25 with the verified public-site model-to-payment workflow, then revised after submission for the expanded workspace. The actual submitted entry is https://devpost.com/software/batchloom and its public video is https://www.youtube.com/watch?v=aEQ8BUAgE6c. Historical preparation checks below remain checkpoint notes; they do not supersede the submission receipt.
 
 ## Verified submission requirements
 
@@ -40,6 +40,8 @@ Batchloom explores the gap between that scattered interest and a buyer's actual 
 ### What it does
 
 Batchloom is a production desk for a fictional risograph notebook studio.
+
+The request library offers three working contexts: a writing circle, a vermilion print workshop and a bookshop restock, with 24 original fictional requests in total. Each context includes clear interest, conflicting terms and incomplete details. Search, sorting and status filters surface what needs attention; separate tab-local drafts retain edits across context changes and reloads, while restored inputs always require fresh analysis and review. Distinct generated scenes establish each context, and the collection register and payment journal show actual ledger state and next actions.
 
 A maker reviews synthetic customer requests with local AI assistance. The model proposes the product, quantity, colorway, explicit per-unit budget and date, alongside quotations from the source. The interface puts those words next to the interpretation so a person can inspect it. Missing or incompatible details can be held for review rather than treated as confirmed demand.
 

@@ -130,3 +130,33 @@ Selected asset: `public/images/notebook-vermilion.png`, 1122 × 1402 pixels, 2,2
 
 Visual inspection: the reference composition, botanical pattern, ivory paper and shadow remain consistent; ink is vermilion, with no lettering, logos or extra objects. This remains an illustrative fictional product, not evidence of real stock or manufacturing.
 
+## 8–10. Context library scenes — 2026-10-25 workspace refinement
+
+Each scene was generated separately with the built-in image generator, `transparent_background: false`, without a reference image. The selected 1536 × 1024 PNGs were copied unchanged into `public/images/`. No image editing or resizing was performed. They identify fictional use contexts; they are not evidence of customers, inventory or shipped orders. Each card and its corresponding desk share a scene as a context identifier. Operations screens use state and typography rather than repeated scene photography.
+
+### case-workshop.png
+
+```text
+Use case: photorealistic-natural. Asset type: editorial collection photo for Batchloom, a refined cream-paper and forest-green independent print studio application. Primary request: create a wide 3:2 editorial photograph of a small risograph workshop preparation table, vermilion/red botanical ink printed A5 notebooks arranged asymmetrically beside one clean ink roller and folded rust linen, one notebook open showing unmarked warm ivory paper. Different viewpoint from a flat lay: close three-quarter side view, natural window shadows, subtle paper grain. Magazine art direction, quiet luxurious craftsmanship, tactile and restrained. Palette warm ivory, vermilion, tobacco wood; no cobalt blue. No people, no text, no letters, no logos, no UI, no watermark. The notebooks are fictional illustrative products. Avoid repetitive identical grids, clutter and plastic texture.
+```
+
+Original generated filename: `exec-14c5ff49-4f87-4b46-b0dd-f654007c798b.png`.
+
+### case-restock.png
+
+```text
+Use case: photorealistic-natural. Asset type: distinctive editorial case-library card for Batchloom, refined independent paper studio. Primary request: 3:2 wide photograph of a small independent bookshop receiving a stationery restock: three compact bundles of ivory A5 notebooks, a glimpse of cobalt botanical print on one cover, cream paper belly bands and natural twine, shallow kraft shipping tray in foreground, cropped bookshelves softly out of focus behind. No people. Side-on waist-height close framing, not flat lay. Calm daylight, forest-green shelf edge, ivory paper, natural cardboard. Premium editorial still life, tactile matte paper, believable asymmetry, different visual story from a printmaking table. No readable text, no labels, no logos, no watermark, no interface. Fictional illustrative merchandise, not proof of shipped orders. Keep composition uncluttered.
+```
+
+Original generated filename: `exec-03fa98c7-92b5-4f5a-a114-e7cb85a5b367.png`.
+
+### case-circle.png
+
+```text
+Use case: photorealistic-natural. Asset type: editorial scenario-card photograph for Batchloom. A quiet independent writing-circle table before participants arrive: one open ivory notebook with completely blank pages in foreground, one closed ivory A5 notebook with fine cobalt blue botanical risograph print, a simple ceramic cup and graphite pencil, two chairs cropped at opposite edges, soft early-morning side light on pale oak. Wide 3:2 close composition, much negative space, editorial Japanese stationery magazine aesthetic, tactile paper and subtle grain. Palette ivory, cobalt, muted sage. This must feel like a place to use notebooks, not another product grid or packing scene. No people, no hands, no written text, no brands, no logo, no watermark, no UI. Fictional illustrative environment.
+```
+
+Original generated filename: `exec-50d9d3fc-f9b6-4577-9c6b-dd2af3dd466c.png`.
+
+Visual inspection: the three assets use distinct settings, angles, props and color emphasis. Blank pages remain unlettered, objects are uncluttered, and no identifiable people or brands are shown. Generated objects can differ in fine detail from the catalog product photograph; these are context illustrations rather than exact product specifications.
+
