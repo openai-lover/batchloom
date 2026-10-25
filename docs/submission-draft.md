@@ -1,6 +1,6 @@
 # Batchloom — Devpost submission draft
 
-Draft prepared 2026-10-25. This file separates reusable public copy from internal submission checks. It is not a submitted entry. Verify the final model run, URLs and access instructions before publishing.
+Prepared 2026-10-25 with the verified public-site model-to-payment workflow. This file separates reusable public copy from internal submission checks. It is not a submitted entry; the public YouTube URL and final Devpost workflow remain separate steps.
 
 ## Verified submission requirements
 
@@ -19,10 +19,10 @@ Devpost's standard flow includes a name, tagline, thumbnail, story, built-with t
 | Story | Copy the public project story below. |
 | Built with | PayPal REST APIs, WebLLM, Qwen3, WebGPU, TypeScript, React, Cloudflare Workers, Cloudflare D1, HTML, CSS. Confirm final deployed stack and tags. |
 | AI/tools explanation | Copy the tool-use text below; retain the final model manifest and evaluation report. |
-| Try-it-out URL | Private review deployment: https://batchloom-studio.nununong.chatgpt.site . Public approval and remote judge-access verification remain pending. The repository/setup alternative is still required if the private preview cannot be accessed by judges. |
-| Public repository | Add the actual public repository URL and verify the license badge/metadata is detected. |
-| Video | Add the public YouTube URL after exporting the approved storyboard below three minutes. |
-| Thumbnail/gallery | Actual product UI screenshots with fictional/sample labeling visible. Identify decorative generated product photography as illustrative. |
+| Try-it-out URL | https://batchloom-studio.nununong.chatgpt.site — public access and an actual local-AI → approved collection → buyer authorization → maker capture workflow were verified. Requires a compatible desktop WebGPU device for local AI and an initial model download of roughly 1 GB. PayPal is sandbox only. |
+| Public repository | https://github.com/openai-lover/batchloom — public source, assets, run instructions and top-level open-source license. An independent unauthenticated archive check matched all 192 prepared files at commit e4181a905ffdbf5fc1308e39f48f6f55f557af55. Resync the final document/UI-only changes before final submission. |
+| Video | Approved 160-second local release: outputs/dual-hackathons/video/batchloom-reviewable-release.mp4 under the task workspace. Add the actual public YouTube URL after upload and verify signed-out playback. The video uses actual recorded UI still/crop sequences, with that disclosure retained. |
+| Thumbnail/gallery | Original generated 3:2 project cover: outputs/dual-hackathons/devpost-thumbnail.png under the task workspace (1536×1024, under 5 MB). Gallery: actual public UI screenshots with fictional/sample labeling. Decorative notebook photography is illustrative. |
 | Team / submitter / country | Use the entrant's existing verified account details. Do not invent a biography, age, affiliation, collaborators or developer-account identifier. |
 | Additional questions | Inspect the actual form and answer only verified facts. Do not opt into unused sponsor tools. |
 | Final submission | Review the finished entry and applicable terms in the authorized submission workflow. Saving a draft is not submission. |
@@ -59,9 +59,11 @@ PayPal's sandbox Orders API creates AUTHORIZE orders. The server records authori
 
 ### What is working
 
-A real PayPal sandbox run completed buyer approval and authorization for 12 notebooks at $24.00 each, followed by maker-initiated settlement showing COMMITTED and $288.00 captured. This is test-environment integration evidence, not revenue or a production reliability claim.
+A verified workflow on the public site connected actual local model output to payment on the same collection. Qwen3 analyzed eight synthetic requests and identified three compatible requests totaling 12 potential units. The observed desktop run took 74 seconds including loading; this is one device measurement, not a speed guarantee.
 
-A separate on-device run analyzed eight synthetic requests and produced three compatible requests totaling 12 potential units. After evidence review and explicit maker approval, the application published a new OPEN collection and buyer page with zero reservations. This newly published collection is separate from the earlier payment test. The authored illustrative sample remains labeled separately from actual model output.
+After source-evidence review and explicit maker approval, that collection opened with zero reservations. One buyer then approved a PayPal sandbox authorization for 12 notebooks at $24.00 each. Maker-initiated settlement on the same collection reached COMMITTED with $288.00 captured, and the reserving buyer’s refreshed receipt showed the completed sandbox charge. Twelve units do not imply twelve customers. The authored illustrative sample remains distinct from actual model output.
+
+The public demonstration is a fictional-product, test-environment integration. It establishes this observed workflow, not revenue or a production reliability guarantee.
 
 ### Challenges and limits
 
@@ -83,7 +85,7 @@ Expand the published model evaluation with more independent requests, Korean cas
 
 ## AI and developer tools — additional-field copy
 
-Batchloom uses the open-weight Qwen3 model through WebLLM for on-device structured request extraction. The configured candidate at this checkpoint is **Qwen3-1.7B-q4f16_1-MLC**, using WebLLM 0.2.86 and model revision **80b3abcec6c3b3f5355dc0cc99cc4fb578f192bc**. The current evidence-choice analysis contract was run on the actual browser workflow and on six unseen synthetic English cases: four fully correct complete records, two held for review. Retain the final manifest and original evaluation report; do not turn this small result into a general accuracy percentage. Model files download from public hosts, while inference processes request text locally.
+Batchloom uses the open-weight Qwen3 model through WebLLM for on-device structured request extraction. The selected model is **Qwen3-1.7B-q4f16_1-MLC**, using WebLLM 0.2.86 and model revision **80b3abcec6c3b3f5355dc0cc99cc4fb578f192bc**. The current evidence-choice analysis contract was run on the actual browser workflow and on six unseen synthetic English cases: four fully correct complete records, two held for review. Retain the final manifest and original evaluation report; do not turn this small result into a general accuracy percentage. Model files download from public hosts, while inference processes request text locally.
 
 OpenAI Codex assisted implementation, and the built-in image generator produced original decorative fictional product photographs, button textures and a stamp. Generated imagery is not evidence of inventory, customers, payment success or model performance. PayPal REST APIs handle buyer-approved sandbox authorizations and maker-initiated settlement; browser model output cannot call financial actions.
 
@@ -91,15 +93,15 @@ OpenAI Codex assisted implementation, and the built-in image generator produced 
 
 | Claim / deliverable | Checkpoint evidence | Publication handling |
 | --- | --- | --- |
-| Maker/buyer interface | Working local preview and buyer screenshots listed below | Capture the final deployed revision; screenshots alone are not the working demo. |
-| Actual authorization | Root verified sandbox buyer approval and authorization for 12 units / $288.00 | Use sanitized sandbox footage. Do not expose login details or credentials. |
-| Actual capture | Root verified COMMITTED and $288.00 captured after maker settlement | Keep this distinct from fixture totals and request-interest totals. |
+| Maker/buyer interface | Public deployment actually exercised through model analysis, human approval, publication, authorization and capture | Actual CUA still/crop sequences illustrate the working public demo; they are not continuous interaction footage. |
+| Actual authorization | Same public model-created collection: one buyer authorized 12 units / $288.00 | Actual post-authorization receipt and maker totals. No credentials or login-entry footage. |
+| Actual capture | Same public collection: maker COMMITTED / 12 units / $288.00 captured; reserving buyer refreshed to completed sandbox charge | Keep public collection evidence separate from the controlled recovery tests. |
 | Void/refund | Actual sandbox void confirmed in a controlled deadline test; actual refund confirmed in a separate controlled external-invalidation recovery test | Both used isolated ledgers and left application D1 unchanged. Only the deadline test simulated time. Do not describe the refund test as a full application UI flow. |
 | Local AI | Insufficient earlier baselines retained; actual 1.7B workflow and six-case holdout completed (4 correct records, 2 held) | Report sample size, full-record result and abstentions together. Do not claim broad accuracy or Korean support. |
 | Raw request privacy | Current local-model API accepts reviewed terms/counts and rejects extra source fields | Verify the production build and network requests before publishing the privacy wording. |
-| Source/license | Public repository URL and top-level license are not yet confirmed by this draft | Required before submission. Keep dependency/model notices. |
+| Source/license | Public repository independently downloaded without authentication; all 192 files matched prepared bytes at e4181a905ffdbf5fc1308e39f48f6f55f557af55, including the top-level license and notices | This audit is a source checkpoint. Final document/UI-only amendments must be synced; do not imply the earlier hash audit attests future commits. |
 | Judge access | Hosted URL or complete setup, model/device requirements and sandbox-only testing route | Verify from a fresh browser and keep available through judging. Do not publish personal account passwords, private keys or reusable merchant secrets. |
-| Video | Storyboard in docs/demo-storyboard.md; final export/upload pending | Verify duration, English captions, public YouTube playback and actual UI behavior. |
+| Video | Approved 160-second release assembled from actual public workflow screenshots and labelled separate test-result cards | English narration and highlight captions; verify the final public YouTube playback after upload. No upload was performed by this document/video production task. |
 | Identity / eligibility | Not established by this file | Use only the user's real account information and existing trusted evidence. |
 
 Buyer QA screenshots saved by this task:
@@ -107,12 +109,15 @@ Buyer QA screenshots saved by this task:
 - artifacts/screenshots/buyer-desktop-qa.jpg
 - artifacts/screenshots/buyer-mobile-390-qa.jpg
 
-Separate root evidence, reported after the buyer QA:
+Current public workflow evidence:
 
-- outputs/dual-hackathons/paypal-authorized.png
-- outputs/dual-hackathons/paypal-captured-maker.png
+- outputs/dual-hackathons/public-deployment-qa.json
+- outputs/dual-hackathons/public-paypal-authorized.png
+- outputs/dual-hackathons/public-qa-maker-captured.jpg
+- outputs/dual-hackathons/public-paypal-captured-buyer.png
+- outputs/dual-hackathons/public-source-check-report.json
 
 The root evidence paths are relative to the task workspace, not necessarily this application folder. Inspect and sanitize the actual files before using them in a public entry.
 
 
-Latest evidence checkpoint: the local AI approval/publication, controlled sandbox void, and separate controlled external-invalidation refund facts above supersede the earlier pending statements. Video assembly remains an explicitly labelled local editing draft; no video has been uploaded or submission completed by this document task.
+Latest evidence checkpoint: the public same-collection model → approval → authorization → capture workflow supersedes the earlier separate-run demonstration. The six-case holdout and controlled void/refund tests remain separate evidence with their stated limits. The locally approved release retains the recorded UI still-sequence disclosure. Public YouTube upload and Devpost submission are not performed by this document/video production task.
