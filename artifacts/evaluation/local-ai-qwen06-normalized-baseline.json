@@ -1,0 +1,678 @@
+{
+  "note": "Reanalysis of the original model responses; no new model run. Only documented empty Qwen thinking prefix normalized.",
+  "rawExact": {
+    "exact": 94,
+    "fields": 120
+  },
+  "knownRecovery": {
+    "recovered": 85,
+    "known": 101
+  },
+  "wrongNonNull": 18,
+  "acceptedRecords": 1,
+  "rows": [
+    {
+      "id": "local-eval-en-01",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-01",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-01"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-02",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-02",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-02"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-02"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-03",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-03",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-03"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-03"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-04",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-04",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-04"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-04"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-05",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-05",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-05"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-06",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-06",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-06"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-07",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-07",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-07"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-07"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-08",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-08",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-08"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-09",
+      "status": "eligible",
+      "issues": [
+        {
+          "code": "UNKNOWN_DEADLINE",
+          "field": "deadline",
+          "message": "No explicit ISO date. Confirm timing with the buyer before production.",
+          "severity": "info",
+          "requestId": "local-eval-en-09"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-10",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-10",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-10"
+        },
+        {
+          "code": "UNSUPPORTED_VALUE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents value is not supported by its quoted text. Review it before use.",
+          "severity": "review",
+          "requestId": "local-eval-en-10"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-11",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-11",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-11"
+        },
+        {
+          "code": "UNSUPPORTED_VALUE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents value is not supported by its quoted text. Review it before use.",
+          "severity": "review",
+          "requestId": "local-eval-en-11"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-11"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-en-12",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-en-12",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-12"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-en-12"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-01",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-01",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-01"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-01"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-01"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-01"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-02",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-02",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-02"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "variant",
+          "message": "The variant claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-02"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-03",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-03",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-03"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-03"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-03"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-04",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-04",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-04"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-04"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-04"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-04"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-05",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-05",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-05"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-05"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-05"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-05"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-ko-06",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-ko-06",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-06"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-06"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-06"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-ko-06"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-01",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-01",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-01"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-02",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-02",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-02"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-02"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-03",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-03",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "unitBudgetCents",
+          "message": "The unitBudgetCents claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-03"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-04",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-04",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-04"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "variant",
+          "message": "The variant claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-04"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-05",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-05",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNSUPPORTED_VALUE",
+          "field": "quantity",
+          "message": "The quantity value is not supported by its quoted text. Review it before use.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-05"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "deadline",
+          "message": "The deadline claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-05"
+        }
+      ]
+    },
+    {
+      "id": "local-eval-mixed-06",
+      "status": "needs_review",
+      "issues": [
+        {
+          "code": "LOCAL_UNGROUNDED_OUTPUT",
+          "field": "analysis",
+          "severity": "review",
+          "requestId": "local-eval-mixed-06",
+          "message": "Some model claims did not pass source-evidence checks. Review the original text."
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "product",
+          "message": "The product claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-06"
+        },
+        {
+          "code": "UNGROUNDED_EVIDENCE",
+          "field": "quantity",
+          "message": "The quantity claim needs an exact, nonempty quotation from this request.",
+          "severity": "review",
+          "requestId": "local-eval-mixed-06"
+        }
+      ]
+    }
+  ],
+  "publicArtifactNote": "Synthetic request data only. Browser user agent, device identifiers and local filesystem paths are omitted."
+}
