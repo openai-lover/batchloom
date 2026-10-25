@@ -89,6 +89,7 @@ export default function Studio() {
   }, [draftReady, libraryId, requests, policy.shipBy]);
   function switchScenario(id: LibraryId) {
     if (busy) return;
+    if (id === libraryId) { setScreen('desk'); return; }
     const next = createLibraryScenario(id);
     const saved = drafts.current[id];
     setLibraryId(id); setRequests(saved?.requests ?? next.requests); setPolicy({ ...next.policy, shipBy: saved?.shipBy ?? next.policy.shipBy }); setDispatchDate(saved?.shipBy ?? next.policy.shipBy);
@@ -157,7 +158,7 @@ export default function Studio() {
       if (inputVersion !== latestInput.current) { setNotice('The requests changed while analysis was running. Run it again for the current version.'); return; }
       if (data.status !== 'complete') throw new Error(data.issues[0]?.message || 'Local analysis could not complete. The illustrated example is still available.');
       setAnalysis(data.requests); setAnalysisMode('local'); setModelId(data.model);
-      setAiHint(`Qwen3 ran on this device in ${Math.round((data.elapsedMs || 0) / 1000)} seconds, including loading. Your original requests stay in this browser.`);
+      setAiHint(`Most recent Qwen3 run: ${Math.round((data.elapsedMs || 0) / 1000)} seconds on this device, including loading. Re-analyze after changing inputs.`);
       setNotice('Local analysis complete. Check the source evidence and any unresolved fields before approving a batch.');
     } catch (error) { const message = error instanceof Error ? error.message : 'Local analysis could not complete. Please try again.'; setNotice(message); setAiHint(message); }
     finally { aiController.current = null; setBusy(false); }
